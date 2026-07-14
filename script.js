@@ -8,6 +8,13 @@ const setSiteLinks = () => {
     link.setAttribute('rel', 'noopener');
   });
 
+  const f1Url = config.f1Url || 'https://epsilonf1tv.space-z.ai';
+  document.querySelectorAll('[data-f1-link]').forEach((link) => {
+    link.href = f1Url;
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+
   const telegramUrl = config.telegramUrl || 'https://t.me/epsilonmovies';
   document.querySelectorAll('[data-telegram-link]').forEach((link) => {
     link.href = telegramUrl;

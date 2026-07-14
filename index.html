@@ -63,6 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://epsilonmovies.space-z.ai" data-site-link>Visit Full Site</a>
+            <a class="btn btn-primary" href="https://epsilonf1tv.space-z.ai" data-f1-link>Formula 1 Live</a>
             <a class="btn btn-secondary disabled" href="#download" aria-disabled="true">APK Coming Soon</a>
           </div>
           <div class="hero-badges" aria-label="Highlights">
@@ -82,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul>
             <li>Lightning-fast library browsing</li>
             <li>Minimal buffering and instant playback</li>
-            <li>Formula 1 streaming is currently available in the app</li>
+            <li>Formula 1 streaming is available on both app and website</li>
           </ul>
         </div>
       </div>
@@ -113,7 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <article class="glass-card feature-card reveal">
             <div class="feature-icon">🏎</div>
             <h3>Formula 1</h3>
-            <p>Formula 1 streaming is currently available through the app experience.</p>
+            <p>Formula 1 streaming is available on both the app and website experience.</p>
           </article>
           <article class="glass-card feature-card reveal">
             <div class="feature-icon">⭐</div>
@@ -216,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </details>
           <details class="glass-card faq-item reveal">
             <summary>Can I watch Formula 1?</summary>
-            <p>Yes, Formula 1 streaming is currently available through the app experience.</p>
+            <p>Yes, Formula 1 streaming is available on both the app as well as website.</p>
           </details>
           <details class="glass-card faq-item reveal">
             <summary>Do I need an account?</summary>
@@ -285,6 +286,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             dataLayer.push({
               event: 'outbound_click',
               destination: 'https://epsilonmovies.space-z.ai'
+            });
+          });
+        }
+
+        // Track "Formula 1 Live" button click
+        var f1Link = document.querySelector('[data-f1-link]');
+        if (f1Link) {
+          f1Link.addEventListener('click', function(e) {
+            dataLayer.push({
+              event: 'formula1_live_click',
+              destination: 'https://epsilonf1tv.space-z.ai'
             });
           });
         }
